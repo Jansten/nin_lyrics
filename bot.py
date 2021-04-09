@@ -124,11 +124,11 @@ def wait_until_certain_hour_to_start(start_hour: int) -> None:
 def delete_existing_tweets_with_same_text(api: tweepy.API, tweet: str) -> None:
     results = api.search(q=tweet, tweet_mode='extended')
 
-    for result in results:
+    #for result in results:
 
-        if result.user.screen_name == ACCOUNT_NAME and result.full_text == tweet:
-            print(f"Deleting tweet {result.id}")
-            api.destroy_status(result.id)
+        #if result.user.screen_name == ACCOUNT_NAME and result.full_text == tweet:
+            #print(f"Deleting tweet {result.id}")
+            #api.destroy_status(result.id)
 
 
 if __name__ == '__main__':
