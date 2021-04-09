@@ -72,10 +72,10 @@ def create_api() -> tweepy.API:
     return api
 
 
-def get_texts(input_file: str, shuffle=False) -> list:
+def get_texts(input_file: str, shuffle=True) -> list:
 
     with open(input_file, 'r') as f:
-        texts = f.read().splitlines(True)
+        texts = f.read().splitlines()
 
     if shuffle:
         random.shuffle(texts)
