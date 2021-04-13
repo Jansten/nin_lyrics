@@ -38,7 +38,7 @@ def run_bot(input_file: str, wait_time_hours: float) -> None:
 
                     logging.info(tweet)
 
-                    delete_existing_tweets_with_same_text(api, tweet)  # remove old same tweet; duplicate tweets are not allowed by Twitter
+                    delete_existing_tweets_with_same_text(api, tweet)  # remove old tweets; duplicate tweets are not allowed by Twitter
 
                     call_return_status = api.update_status(tweet, id_of_thread_tweet_to_reply_to)
                     logging.info(call_return_status)
